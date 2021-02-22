@@ -1,0 +1,51 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+
+#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+
+choice_1 = input('You are on a beach with white sand, you look around and begin to walk towards the nearest road you can find. After walking for awhile, you come to a fork in the road. Which way do you choose - [left] or [right]?\n')
+
+choice_1 = choice_1.lower()
+
+if choice_1 == "left":
+  choice_2 = input('You arrive at a dock, there is a small island visible in the distance. You feel yourself drawn to it. It is close enough that you can maybe swim there, or wait for a boat to come along. What do you choose to do - [swim] or [wait]?\n')
+  choice_2 = choice_2.lower()
+  if choice_2 == "wait":
+    choice_3 = input('You wait for hours, questioning your decision. Your patience is rewarded when you see a boat arrive, mysteriously without a captain. You decide to ride the boat to the island. You count yourself blessed to arrive to the island safely. After you disembark, you immediately notice a house with 3 doors - [red], [blue], and [yellow] - which one will you open?\n')
+    choice_3 = choice_3.lower()
+    if choice_3 == "yellow":
+      print("Inside the door is a treasure hoard - You win!")
+    elif choice_3 == "red":
+      print("You are engulfed in a blaze that erupts from the door. Game Over.")
+    elif choice_3 == "blue":
+      print("Beasts rush from the door and rip you limb from limb. Game Over.")
+    else:
+      print("You chose a door that does not exist - Game Over!")
+  else:
+    print('''
+    As you swim, you notice shadowy figures moving below you in the depths. You swim faster and faster as the figures get closer and closer to you. Despite your best efforts, you are devoured by creatures of the sea. Game Over. 
+    ''')
+else:
+  print("You fall into a pit and die. Game Over")
